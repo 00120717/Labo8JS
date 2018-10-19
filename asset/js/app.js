@@ -117,7 +117,7 @@ const mostrar = ()=>{
     agregar();
    } 
 //¿Qué es lo que obtenemos cuando se ejecuta item.childNodes[i].textContent;
-//
+//almacena los datos de cada campo
 
 
 
@@ -126,30 +126,12 @@ const mostrar = ()=>{
 
 
 var fecha = document.getElementById("fecha");
-var desc = document.getElementById("desc");
+var desc = document.getElementById("descp");
 var cant = document.getElementById("cant");
 
 var valor = fecha.value;
 var valor2 = desc.value;
 var valor3 = cant.value;
-
-
-function validar(){
-    
-    if(valor == "" || valor == null){
-        alert('El campo Fecha debe estar lleno');
-        return false;
-    }else if(valor2 == "" || valor2 == null){
-        alert('El campo desc  debe estar lleno');
-        return false;
-    }else if(valor3 == "" || valor3 == null){
-        alert('El campo cant debe estar lleno');
-        return false;
-    }
-
-    return true;
-}
-
 
 fecha.oninput = ()=>{
 
@@ -177,3 +159,21 @@ cant.oninput = ()=>{
         cant.style.borderColor = "green";
     }
 }
+
+function validar(){
+    
+    if(valor == "" || valor == null){
+        alert('El campo Fecha debe estar lleno');
+        return false;
+    }else if(valor2 == "" || valor2 == null){
+        alert('El campo desc  debe estar lleno');
+        return false;
+    }else if(valor3 == "" || valor3 == null){
+        alert('El campo cant debe estar lleno');
+        return false;
+    }
+
+    return true;
+}
+
+
